@@ -1,0 +1,8 @@
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #ccc 60%, #999 100%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
