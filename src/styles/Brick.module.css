@@ -5,20 +5,37 @@
   transition: transform 0.2s ease;
 }
 
-/* Culori diferite pentru bricks */
+/* Different color variants for bricks */
 .brickNormal {
   background: linear-gradient(to bottom, #ff5722, #e64a19);
   border: 1px solid #c62828;
 }
+
 .brickMedium {
   background: linear-gradient(to bottom, #ffa000, #ff6f00);
   border: 1px solid #ff6f00;
 }
+
 .brickTough {
   background: linear-gradient(to bottom, #8bc34a, #689f38);
   border: 1px solid #558b2f;
 }
 
+/* Hover effect for larger screens */
 .brick:hover {
   transform: scale(1.05);
+}
+
+/* Responsive adjustments for screens 900px and below */
+@media (max-width: 900px) {
+  .brick {
+    /* Scale down bricks to 75% of their original size */
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+  
+  /* Adjust hover effect so it scales relative to the 0.75 factor */
+  .brick:hover {
+    transform: scale(0.7875); /* 0.75 * 1.05 = 0.7875 */
+  }
 }

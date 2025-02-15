@@ -9,6 +9,7 @@
   user-select: none;
 }
 
+/* Info bar at the top */
 .infoBar {
   width: 100%;
   max-width: 800px;
@@ -41,8 +42,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-
-  /* Permite click DOAR pe butoane, restul e "transparent" la mouse */
+  /* Allow clicks only on buttons */
   pointer-events: none;
 }
 
@@ -61,10 +61,12 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
 .overlay button:hover {
   background: #666;
 }
 
+/* Control bar at the bottom */
 .controlBar {
   width: 100%;
   max-width: 800px;
@@ -81,6 +83,29 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
 .controlBar button:hover {
   background: #666;
+}
+
+/* Responsive styles for screens 900px and below */
+@media (max-width: 900px) {
+  .gameBoard {
+    width: 600px;
+    height: 400px;
+  }
+  
+  .infoBar,
+  .controlBar {
+    max-width: 600px;
+  }
+  
+  .overlay h2 {
+    font-size: 1.5em;
+  }
+  
+  .overlay button {
+    padding: 4px 10px;
+    font-size: 0.9em;
+  }
 }
